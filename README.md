@@ -30,8 +30,9 @@ docker run -v $(pwd):/home/rstudio -e PASSWORD=yfd -p 8787:8787 -t project
 #### Generate files, results and the report  
 ```makefile
 make clean
-make .created-dirs
+make .create-dirs
 make data/processed_tweets.csv
+make figure/density.png
 make figure/negative.html figure/positive.html figure/negative.png figure/positive.png
 make report.pdf
 ```
