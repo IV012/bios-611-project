@@ -5,6 +5,7 @@ library(wordcloud2)
 library(stopwords)
 library(webshot)
 library(htmlwidgets)
+webshot::install_phantomjs()
 
 data <- read_csv("data/processed_tweets.csv")
 data("stop_words")
