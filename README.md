@@ -12,10 +12,26 @@ Data structure:
 | Followers | The number of followers of this account.                           |
 | Friends   | The number of friends (followed by and following) of this account. |
 | Favorites | The number of "like"s.                                             |
-| Statuses  | The number of activities of the account owner.                                         |
+| Statuses  | The number of activities of the account owner.                     |
 | Retweet   | The number of retweets.                                            |
 | Label   | The mental status, whether depression or not. |                                           
 
 ## Goal  
 1. EDA: label distribution, word frequency, text length...  
 2. Statistical Modelling: prediction, clustering...
+
+## Manual  
+#### Build docker image and run the container  
+```docker
+docker build . -t project
+docker run -v $(pwd):/home/rstudio -e PASSWORD=yfd -p 8787:8787 -t project
+```
+
+#### Generate files, results and the report  
+```makefile
+make clean
+make .created-dirs
+make data/processed_tweets.csv
+make figure/negative.html figure/positive.html figure/negative.png figure/positive.png
+make report.pdf
+```
