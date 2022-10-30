@@ -6,20 +6,20 @@ output:
   pdf_document: default
 ---
 
-## Data preprocessing & Text cleaning
+## 1. Data preprocessing & Text cleaning
 
-## EDA
+## 2. EDA
 
-### Basic statistics
+### 2.1 Basic statistics
 
 ![Density](figure/density.png)
 
-### Wordcloud
+### 2.2 Wordcloud
 
-#### Negetiva Sample
+#### 2.2.1 Negetiva Sample
 
 ![Negetive Wordcloud](figure/negative.png)
 
-#### Positive Sample
+#### 2.2.2 Positive Sample
 
 ![Negetive Wordcloud](figure/positive.png)
