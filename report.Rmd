@@ -1,0 +1,25 @@
+---
+title: "Final Report"
+author: "Yifan"
+date: "`r Sys.Date()`"
+output:
+  pdf_document: default
+---
+
+## Data preprocessing & Text cleaning
+
+## EDA
+
+### Basic statistics
+
+![Density](figure/density.png)
+
+### Wordcloud
+
+#### Negetiva Sample
+
+![Negetive Wordcloud](figure/negative.png)
+
+#### Positive Sample
+
+![Negetive Wordcloud](figure/positive.png)
