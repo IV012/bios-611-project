@@ -5,6 +5,12 @@ clean:
 	rm -f data/*
 	rm -f figure/*
 	rm -f result/*
+	
+
+.created-dirs:
+	mkdir -p figure
+	mkdir -p data
+	mkdir -p result
 
 data/processed_tweets.csv: Mental-Health-Twitter.csv preprocess.R
 	Rscript preprocess.R
