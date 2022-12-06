@@ -21,5 +21,17 @@ figure/density.png: stat.R data/processed_tweets.csv
 figure/negative.html figure/positive.html figure/negative.png figure/positive.png: eda.R data/processed_tweets.csv
 	Rscript eda.R
 
+figure/follower_month.png figure/follower_year.png figure/freq_month.png figure/freq_year.png: eda.py data/processed_tweets.csv
+	python3 eda.py
+
+model/model_lstm.pt figure/loss.png: model.py train.py train_prepare.py data/processed_tweets.csv
+	python3 train.py
+
+result/cm_lstm.png: model.py eval.py train_prepare.py data/processed_tweets.csv model/model_lstm.pt
+	python3 eval.py
+
+result/cm_bnb.png: data/processed_tweets.csv bernoulli.py
+	python3 bernoulli.py
+
 report.pdf: figure/density.png figure/negative.png figure/positive.png report.Rmd
 	R -e "rmarkdown::render(\"report.Rmd\", output_format=\"pdf_document\")"

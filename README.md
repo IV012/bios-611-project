@@ -34,5 +34,13 @@ make .create-dirs
 make data/processed_tweets.csv
 make figure/density.png
 make figure/negative.html figure/positive.html figure/negative.png figure/positive.png
+make figure/follower_month.png figure/follower_year.png figure/freq_month.png figure/freq_year.png
+make model/model_lstm.pt figure/loss.png
+make result/cm_lstm.png
+make result/cm_bnb.png
 make report.pdf
 ```
+
+## Final Report
+
+Please check the final report `report.html`.
