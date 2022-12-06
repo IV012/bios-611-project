@@ -24,11 +24,11 @@ figure/negative.html figure/positive.html figure/negative.png figure/positive.pn
 figure/follower_month.png figure/follower_year.png figure/freq_month.png figure/freq_year.png: eda.py data/processed_tweets.csv
 	python3 eda.py
 
-model/model_lstm.pt figure/loss.png: model.py train.py train_prepare.py data/processed_tweets.csv
-	python3 train.py
+model/model_lstm.pt figure/loss.png: model.py network/train.py network/train_prepare.py data/processed_tweets.csv
+	python3 network/train.py
 
-result/cm_lstm.png: model.py eval.py train_prepare.py data/processed_tweets.csv model/model_lstm.pt
-	python3 eval.py
+result/cm_lstm.png: model.py network/eval.py network/train_prepare.py data/processed_tweets.csv model/model_lstm.pt
+	python3 network/eval.py
 
 result/cm_bnb.png: data/processed_tweets.csv bernoulli.py
 	python3 bernoulli.py
