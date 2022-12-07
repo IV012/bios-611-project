@@ -38,7 +38,7 @@ make figure/follower_month.png figure/follower_year.png figure/freq_month.png fi
 make model/model_lstm.pt figure/loss.png
 make result/cm_lstm.png
 make result/cm_bnb.png
-make report.pdf
+make report.html
 ```
 
 ## Final Report
