@@ -33,5 +33,5 @@ result/cm_lstm.png: model.py network/eval.py network/train_prepare.py data/proce
 result/cm_bnb.png: data/processed_tweets.csv bernoulli.py
 	python3 bernoulli.py
 
-report.pdf: figure/density.png figure/negative.png figure/positive.png report.Rmd
-	R -e "rmarkdown::render(\"report.Rmd\", output_format=\"pdf_document\")"
+report.html: figure/density.png figure/negative.png report.Rmd figure/follower_month.png result/cm_lstm.png result/cm_bnb.png
+	R -e "rmarkdown::render(\"report.Rmd\", output_format=\"html_document\")"
